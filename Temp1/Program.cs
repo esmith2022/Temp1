@@ -158,12 +158,12 @@ namespace CircularQ
     {
         static void Main()
         {
-            //QueueCircular Q = new QueueCircular(5);
+            QueueCircular Q = new QueueCircular(5);
 
-            //int item = 0;
+            int item = 0;
 
-            /*
-             * Console.WriteLine("\nPrintout of queue\n--------------------");
+            
+              Console.WriteLine("\nPrintout of queue\n--------------------");
                        Q.printQueue();
                        Console.WriteLine();
 
@@ -228,13 +228,18 @@ namespace CircularQ
                        Q.printQueue();
 
 
-               */
-            /*
-                            for(int i = 0; i < 4; i++){
-                               Console.WriteLine("Size =" + Q.Size());
-                               Q.enqueue(i);
-                           }
-              */
+               
+            
+            for(int i = 0; i < 4; i++){
+                Console.WriteLine("Size =" + Q.Size());
+                Q.enqueue(i);
+                Console.WriteLine("Is Empty? " + Q.isEmpty());
+                Console.WriteLine("Peek" + Q.peek(ref item));
+                Console.WriteLine("All Clear");
+                Q.clear();
+                             
+            }
+           
 
 
 
@@ -243,7 +248,7 @@ namespace CircularQ
 
 
 
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
